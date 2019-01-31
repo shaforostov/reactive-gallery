@@ -10,7 +10,7 @@ class Post extends Component {
     render() {
         const {post} = this.props;
         const body = <section>{post.body}</section>;
-        const path = './src/' + post.img;
+        const path = './img/' + post.img;
 
         return (
             <div style={{color: 'red'}}>
