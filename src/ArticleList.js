@@ -16,7 +16,7 @@ class ArticleList extends Component {
 
     componentWillMount() {
         //console.log('mythis:', this);
-        fetch('http://www.mocky.io/v2/5c502ee7330000c024c58764')
+        fetch('http://www.mocky.io/v2/5c52dacd320000a72a855ddb')
             .then(response => response.json())
             .then(result => this.setState({data: result}))
             .catch(e => console.log(e));
