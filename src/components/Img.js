@@ -22,7 +22,6 @@ class Img extends Component {
     }
 
     fullSizeImg = () => {
-        console.log('----', 'fullSizeImg');
         this.setState({
             isOpened: !this.state.isOpened
         });
