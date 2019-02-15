@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react';
 import Blog from './layout/Blog'
+import Table from './layout/Table'
 
 class ArticleList extends Component {
 
@@ -13,7 +14,7 @@ class ArticleList extends Component {
     }
 
     componentWillMount() {
-        fetch('http://www.mocky.io/v2/5c52dacd320000a72a855ddb')
+        fetch('http://www.mocky.io/v2/5c6563703300008a12b99d5a')
             .then(response => response.json())
             .then(result => this.setState({data: result}))
             .catch(e => console.log(e));
@@ -23,7 +24,7 @@ class ArticleList extends Component {
         const { data } = this.state;
 
         return (
-            <Blog data={data} />
+            <Table data={data} />
         );
     }
 }
