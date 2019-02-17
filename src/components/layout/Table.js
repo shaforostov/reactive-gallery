@@ -1,12 +1,25 @@
 import React, {Component} from 'react';
 import Post from '../Post';
-import ReactTable from "react-table";
-import 'react-table/react-table.css';
+//import ReactTable from "react-table";
+//import 'react-table/react-table.css';
+import _ from 'lodash';
 
 class Table extends Component {
 
     render() {
         const { data } = this.props;
+
+        const rows = _.chunk(data, 3);
+
+        const articles = rows.map((row, i) => (
+            <tr key={i}>
+                {row.map((cell, i) => (
+                    <td key={i}>{cell}</td>
+                ))}
+            </tr>
+        ));
+
+        return <table>{articles}</table>;
         //var tr = <tr>;
         /*const articleElements = data.map(el =>
             <tr><td><Post post={el}/></td></tr>);*/
@@ -32,7 +45,7 @@ class Table extends Component {
                     {articles}
                 </table>;*/
 
-        const columns = [{
+        /*const columns = [{
             Header: 'Title',
             accessor: 'title'
         }, {
@@ -47,7 +60,9 @@ class Table extends Component {
         return <ReactTable
             data={data}
             columns={columns}
-        />
+        />*/
+
+
 
     }
 }
