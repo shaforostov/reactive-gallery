@@ -8,11 +8,11 @@ import Table from './components/layout/Table'
 
 
 
-//ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(
+ReactDOM.render(<App />, document.getElementById('root'));
+/*ReactDOM.render(
     <Table data={[1, 2, 3, 4, 5, 6, 7]} />,
     document.getElementById("root")
-);
+);*/
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

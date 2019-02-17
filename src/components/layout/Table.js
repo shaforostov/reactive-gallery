@@ -9,12 +9,12 @@ class Table extends Component {
     render() {
         const { data } = this.props;
 
-        const rows = _.chunk(data, 3);
+        const rows = _.chunk(data, 2);
 
         const articles = rows.map((row, i) => (
             <tr key={i}>
                 {row.map((cell, i) => (
-                    <td key={i}>{cell}</td>
+                    <td key={i}><Post post={cell}/></td>
                 ))}
             </tr>
         ));
