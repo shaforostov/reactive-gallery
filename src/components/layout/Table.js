@@ -9,7 +9,11 @@ class Table extends Component {
     render() {
         const { data } = this.props;
 
-        const rows = _.chunk(data, 2);
+        console.log('data', data);
+
+        const rows = _.chunk(data, 3);
+
+        console.log('rows', rows);
 
         const articles = rows.map((row, i) => (
             <tr key={i}>
@@ -20,30 +24,6 @@ class Table extends Component {
         ));
 
         return <table>{articles}</table>;
-        //var tr = <tr>;
-        /*const articleElements = data.map(el =>
-            <tr><td><Post post={el}/></td></tr>);*/
-
-        /*const articleElements = data.map((el, i) =>
-            <tr><td><Post post={el}/></td></tr>);
-
-        const articles = data.map(function(el, i) {
-            i++;
-            if (i == 1)
-                return <tr><td><Post post={el}/></td>;
-            else if (i % 3 == 0)
-                return <td><Post post={el}/></td></tr>;
-            else if (i % 4 == 0)
-                return <tr><td><Post post={el}/></td>;
-            else
-                return <td><Post post={el}/></td>;
-        });
-
-        console.log('articleElements', articleElements);
-
-        return <table>
-                    {articles}
-                </table>;*/
 
         /*const columns = [{
             Header: 'Title',
@@ -61,9 +41,6 @@ class Table extends Component {
             data={data}
             columns={columns}
         />*/
-
-
-
     }
 }
 
